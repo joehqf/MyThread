@@ -17,10 +17,13 @@ public class Way2Runnable implements Runnable {
 	public static void main(String[] args) throws InterruptedException {
 		Way2Runnable ra = new Way2Runnable();
 		Thread t1 = new Thread(ra, "线程1");
-		System.out.println("线程1状态:" + t1.isAlive());
+		System.out.println("线程1是否存活:" + t1.isAlive());
+		System.out.println("线程1状态:" + t1.getState());
 		t1.start();
+		System.out.println("线程1状态:" + t1.getState());
 		Thread.sleep(1000);
-		System.out.println("线程1状态:" + t1.isAlive());
+		System.out.println("线程1是否存活:" + t1.isAlive());
+		System.out.println("线程1状态:" + t1.getState());
 		Thread t3 = new Thread(ra, "线程3");
 		t3.start();
 //		Thread t2 = new Thread(new Runnable() {
