@@ -1,0 +1,9 @@
+CAS(无锁优化,自旋锁)   (Compare And Swap/Set)
+cas(V,Expected(期望值),NewValue);
+-if V==E
+V=New
+otherwise try again or fail
+-CPU原语支持
+
+
+ABA 问题 解决方法 : 加版本号; 如果是基础类型无所谓; Java 中Unsafe类 等同于 c ,c++中的指针  

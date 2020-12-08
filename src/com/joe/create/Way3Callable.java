@@ -26,6 +26,9 @@ public class Way3Callable implements Callable<Integer> {
 		// 1.创建线程池
 		ExecutorService es = Executors.newFixedThreadPool(2);
 		// 2.提交执行
+		es.execute(() -> {
+			System.out.println(Thread.currentThread().getName());
+		});
 		Future<Integer> submit = es.submit(call);
 		Future<Integer> submit2 = es.submit(call);
 		// 3.获取结果
