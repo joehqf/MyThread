@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
- * ¶ÁĞ´Ëø
+ * è¯»å†™é”
  */
 public class ReadWriteLockTest {
 
@@ -25,7 +25,7 @@ public class ReadWriteLockTest {
 			lock.lock();
 			try {
 				Thread.sleep(3000);
-				System.out.println("¶ÁÊı¾İ: " + count);
+				System.out.println("è¯»æ•°æ®: " + count);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -39,7 +39,7 @@ public class ReadWriteLockTest {
 			lock.lock();
 			try {
 				Thread.sleep(1000);
-				System.out.println("Ğ´Êı¾İ: " + val);
+				System.out.println("å†™æ•°æ®: " + val);
 				count = val;
 			} catch (InterruptedException e) {
 				e.printStackTrace();

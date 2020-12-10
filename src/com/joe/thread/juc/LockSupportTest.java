@@ -3,7 +3,7 @@ package com.joe.thread.juc;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * LockSupport线程支持
+ * LockSupport绾跨▼鏀寔
  */
 public class LockSupportTest {
 

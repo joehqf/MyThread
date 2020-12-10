@@ -1,7 +1,7 @@
 package com.joe.thread.lock;
 
 /**
- * 锁的显式调用
+ * 閿佺殑鏄惧紡璋冪敤
  */
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -22,7 +22,7 @@ public class ReentrantLockTest {
 				lock.unlock();
 			}
 		};
-		new Thread(run, "线程1").start();
-		new Thread(run, "线程2").start();
+		new Thread(run, "绾跨▼1").start();
+		new Thread(run, "绾跨▼2").start();
 	}
 }

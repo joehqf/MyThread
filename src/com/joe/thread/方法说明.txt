@@ -1,22 +1,22 @@
-setPriority()�����趨�߳����ȼ�
-getPriority();// ��ȡ�߳����ȼ�
-setDeamon(true);//����Ϊ�ػ��߳�
-getState();//��ȡ�߳�״̬
-isAlive();//�Ƿ��ǻ��
+setPriority()方法设定线程优先级
+getPriority();// 获取线程优先级
+setDeamon(true);//设置为守护线程
+getState();//获取线程状态
+isAlive();//是否是活动的
 
-�߳�ֹͣ:
-1.�߳��Լ�ͣ����
-2.ʹ�ñ�־λ������ֹ
+线程停止:
+1.线程自己停下来
+2.使用标志位进行终止
 
-�߳�����:
-sleep(100); // ÿһ��������һ����,sleep�����ͷ���
+线程休眠:
+sleep(100); // 每一个对象都有一把锁,sleep不会释放锁
 
-�߳�����:
-yield()//�����������Ƿ�����ǰ��CPU��Դ�������ø�����������ȥռ��CPUִ��ʱ�䡣
-			//��������ʱ�䲻ȷ�����п��ܸոշ����������ֻ��CPUʱ��Ƭ��
+线程礼让:
+yield()//方法的作用是放弃当前的CPU资源，将它让给其他的任务去占用CPU执行时间。
+			//但放弃的时间不确定，有可能刚刚放弃，马上又获得CPU时间片。
 
-�̲߳��:
-join();//�ȴ����߳���ֹ,�����̲߳ſ�������;t1������t2.join(),��֤t2ִ����Ż�ִ��t1
+线程插队:
+join();//等待该线程终止,其他线程才可以运行;t1运行中t2.join(),保证t2执行完才会执行t1
 
-�߳�״̬��Ǩͼ https://docs.qq.com/doc/DUllVSGxIeFNsQWdS
+线程状态变迁图 https://docs.qq.com/doc/DUllVSGxIeFNsQWdS
 

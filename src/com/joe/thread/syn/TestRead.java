@@ -1,29 +1,29 @@
 package com.joe.thread.syn;
 
 /**
- * ≤‚ ‘‘‡∂¡ ∂‘–¥∑Ω∑®º”À¯,∂‘∂¡∑Ω∑®≤ªº”À¯,ª·≤ªª·”–Œ Ã‚
+ * ÊµãËØïËÑèËØª ÂØπÂÜôÊñπÊ≥ïÂä†ÈîÅ,ÂØπËØªÊñπÊ≥ï‰∏çÂä†ÈîÅ,‰ºö‰∏ç‰ºöÊúâÈóÆÈ¢ò
  *
  */
 public class TestRead {
 	public static void main(String[] args) {
 		Bank bank = new Bank();
 		new Thread(() -> {
-			bank.savings("–°∫Œ", 130.0);
-		}, "–¥œﬂ≥Ã").start();
+			bank.savings("Â∞è‰Ωï", 130.0);
+		}, "ÂÜôÁ∫øÁ®ã").start();
 
 		new Thread(() -> {
-			Double read = bank.read("–°∫Œ");
+			Double read = bank.read("Â∞è‰Ωï");
 			System.out.println(read);
-		}, "∂¡œﬂ≥Ã").start();
+		}, "ËØªÁ∫øÁ®ã").start();
 	}
 }
 
 /**
- * “¯––
+ * Èì∂Ë°å
  */
 class Bank {
 
-	Account account = new Account("–°∫Œ", 100.0);
+	Account account = new Account("Â∞è‰Ωï", 100.0);
 
 	synchronized public void savings(String name, Double je) {
 		if (name.equals(account.getName())) {
@@ -45,7 +45,7 @@ class Bank {
 }
 
 /**
- * ’Àªß
+ * Ë¥¶Êà∑
  */
 class Account {
 

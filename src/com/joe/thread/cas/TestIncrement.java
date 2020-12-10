@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
- * ²âÊÔ¼¸ÖÖ¼¯ÖĞ·½Ê½×ÔÔöĞ§ÂÊ LongAdder - Ê¹ÓÃ·Ö¶ÎËø
+ * æµ‹è¯•å‡ ç§é›†ä¸­æ–¹å¼è‡ªå¢æ•ˆç‡ LongAdder - ä½¿ç”¨åˆ†æ®µé”
  */
 public class TestIncrement {
 
@@ -51,7 +51,7 @@ public class TestIncrement {
 			}
 		});
 		long end = System.currentTimeMillis();
-		System.out.println("sync:" + c.count + " ºÄÊ±:" + (end - begin));
+		System.out.println("sync:" + c.count + " è€—æ—¶:" + (end - begin));
 
 		List<Thread> ts2 = new ArrayList<>();
 		for (int i = 0; i < 10000; i++) {
@@ -67,7 +67,7 @@ public class TestIncrement {
 			}
 		});
 		long end2 = System.currentTimeMillis();
-		System.out.println("atomic:" + c.count2 + " ºÄÊ±:" + (end2 - begin2));
+		System.out.println("atomic:" + c.count2 + " è€—æ—¶:" + (end2 - begin2));
 
 		List<Thread> ts3 = new ArrayList<>();
 		for (int i = 0; i < 10000; i++) {
@@ -83,7 +83,7 @@ public class TestIncrement {
 			}
 		});
 		long end3 = System.currentTimeMillis();
-		System.out.println("LongAdder:" + c.count3 + " ºÄÊ±:" + (end3 - begin3));
+		System.out.println("LongAdder:" + c.count3 + " è€—æ—¶:" + (end3 - begin3));
 
 	}
 }

@@ -1,9 +1,9 @@
-CAS(ÎŞËøÓÅ»¯,×ÔĞıËø)   (Compare And Swap/Set)
-cas(V,Expected(ÆÚÍûÖµ),NewValue);
+CAS(æ— é”ä¼˜åŒ–,è‡ªæ—‹é”)   (Compare And Swap/Set)
+cas(V,Expected(æœŸæœ›å€¼),NewValue);
 -if V==E
 V=New
 otherwise try again or fail
--CPUÔ­ÓïÖ§³Ö
+-CPUåŸè¯­æ”¯æŒ
 
 
-ABA ÎÊÌâ ½â¾ö·½·¨ : ¼Ó°æ±¾ºÅ; Èç¹ûÊÇ»ù´¡ÀàĞÍÎŞËùÎ½; Java ÖĞUnsafeÀà µÈÍ¬ÓÚ c ,c++ÖĞµÄÖ¸Õë  
+ABA é—®é¢˜ è§£å†³æ–¹æ³• : åŠ ç‰ˆæœ¬å·; å¦‚æœæ˜¯åŸºç¡€ç±»å‹æ— æ‰€è°“; Java ä¸­Unsafeç±» ç­‰åŒäº c ,c++ä¸­çš„æŒ‡é’ˆ  

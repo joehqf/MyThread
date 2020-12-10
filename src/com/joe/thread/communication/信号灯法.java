@@ -1,33 +1,33 @@
 package com.joe.thread.communication;
 
-public class ĞÅºÅµÆ·¨ {
+public class ä¿¡å·ç¯æ³• {
 
 	public static void main(String[] args) {
-		²úÆ· cp = new ²úÆ·();
-		new Éú²úÕß2(cp).start();
-		new Ïû·ÑÕß2(cp).start();
+		äº§å“ cp = new äº§å“();
+		new ç”Ÿäº§è€…2(cp).start();
+		new æ¶ˆè´¹è€…2(cp).start();
 	}
 }
 
-class Éú²úÕß2 extends Thread {
-	²úÆ· hcq;
+class ç”Ÿäº§è€…2 extends Thread {
+	äº§å“ hcq;
 
-	public Éú²úÕß2(²úÆ· hcq) {
+	public ç”Ÿäº§è€…2(äº§å“ hcq) {
 		this.hcq = hcq;
 	}
 
 	@Override
 	public void run() {
 		for (int i = 0; i < 15; i++) {
-			hcq.push("½ÚÄ¿" + i);
+			hcq.push("èŠ‚ç›®" + i);
 		}
 	}
 }
 
-class Ïû·ÑÕß2 extends Thread {
-	²úÆ· hcq;
+class æ¶ˆè´¹è€…2 extends Thread {
+	äº§å“ hcq;
 
-	public Ïû·ÑÕß2(²úÆ· hcq) {
+	public æ¶ˆè´¹è€…2(äº§å“ hcq) {
 		this.hcq = hcq;
 	}
 
@@ -39,15 +39,15 @@ class Ïû·ÑÕß2 extends Thread {
 	}
 }
 
-class ²úÆ· {
+class äº§å“ {
 
-	boolean flag = true;// ĞÅºÅµÆ
+	boolean flag = true;// ä¿¡å·ç¯
 	String pro;
 
-	// Éú²úÕß Ìí¼Ó²úÆ·
+	// ç”Ÿäº§è€… æ·»åŠ äº§å“
 	synchronized public void push(String str) {
 		if (!flag) {
-			// Èç¹ûÈİÆ÷ÂúÁË,ÔòÍ¨ÖªÏû·ÑÕßÏû·Ñ, Éú²úµÈ´ı
+			// å¦‚æœå®¹å™¨æ»¡äº†,åˆ™é€šçŸ¥æ¶ˆè´¹è€…æ¶ˆè´¹, ç”Ÿäº§ç­‰å¾…
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
@@ -60,16 +60,16 @@ class ²úÆ· {
 			e.printStackTrace();
 		}
 		flag = !flag;
-		System.out.println("Éú²ú:" + str);
+		System.out.println("ç”Ÿäº§:" + str);
 		pro = str;
 //			this.notifyAll();
 		this.notify();
 	}
 
-//	Ïû·ÑÕßÏû·Ñ²úÆ·
+//	æ¶ˆè´¹è€…æ¶ˆè´¹äº§å“
 	synchronized public void pop() {
 		if (flag) {
-			// Í¨ÖªÉú²ú,Ïû·ÑÕßµÈ´ı,
+			// é€šçŸ¥ç”Ÿäº§,æ¶ˆè´¹è€…ç­‰å¾…,
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
@@ -81,10 +81,10 @@ class ²úÆ· {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Ïû·Ñ:" + pro);
+		System.out.println("æ¶ˆè´¹:" + pro);
 		flag = !flag;
 		// this.notifyAll();
-		this.notify();// »½ĞÑ±ğµÄÏß³Ì,µ«²»ÊÍ·ÅËø
+		this.notify();// å”¤é†’åˆ«çš„çº¿ç¨‹,ä½†ä¸é‡Šæ”¾é”
 	}
 
 }

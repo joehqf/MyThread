@@ -3,7 +3,7 @@ package com.joe.thread.lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * lockInterruptibly ¿ÉÒÔÇ¿Õ¼µÄËø
+ * lockInterruptibly å¯ä»¥å¼ºå çš„é”
  */
 public class InterruptTest {
 
@@ -12,13 +12,13 @@ public class InterruptTest {
 	private void m() {
 		try {
 			lock.lock();
-			System.out.println("m·½·¨¿ªÊ¼...");
+			System.out.println("mæ–¹æ³•å¼€å§‹...");
 			try {
 				Thread.sleep(Integer.MAX_VALUE);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println("m·½·¨½áÊø...");
+			System.out.println("mæ–¹æ³•ç»“æŸ...");
 		} finally {
 			lock.unlock();
 		}
@@ -27,17 +27,17 @@ public class InterruptTest {
 	private void m2() {
 		try {
 			try {
-				lock.lockInterruptibly();// ¶ÔInterrupt()·½·¨×ö³öÏìÓ¦
+				lock.lockInterruptibly();// å¯¹Interrupt()æ–¹æ³•åšå‡ºå“åº”
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
-			System.out.println("m2·½·¨¿ªÊ¼...");
+			System.out.println("m2æ–¹æ³•å¼€å§‹...");
 			try {
 				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println("m2·½·¨½áÊø...");
+			System.out.println("m2æ–¹æ³•ç»“æŸ...");
 		} finally {
 			lock.unlock();
 		}
@@ -49,6 +49,6 @@ public class InterruptTest {
 		Thread t2 = new Thread(c::m2);
 		t2.start();
 
-		t2.interrupt();// ´ò¶ÏÏß³Ì2µÄµÈ´ı
+		t2.interrupt();// æ‰“æ–­çº¿ç¨‹2çš„ç­‰å¾…
 	}
 }

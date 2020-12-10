@@ -3,12 +3,12 @@ package com.joe.thread.juc;
 import java.util.concurrent.Semaphore;
 
 /**
- * Semaphore ĞÅºÅµÆ ÏŞÁ÷
+ * Semaphore ä¿¡å·ç¯ é™æµ
  */
 public class SemaphoreTest {
 
 	public static void main(String[] args) {
-		Semaphore sema = new Semaphore(3);// ÔÊĞín¸öÏß³ÌÍ¬Ê±Ö´ĞĞ
+		Semaphore sema = new Semaphore(3);// å…è®¸nä¸ªçº¿ç¨‹åŒæ—¶æ‰§è¡Œ
 		for (int i = 0; i < 10; i++) {
 			new Thread(() -> {
 				try {

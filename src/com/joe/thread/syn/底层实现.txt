@@ -1,11 +1,11 @@
-JDKÔçÆÚ°æ±¾ ÖØÁ¿¼¶ Ëø, Ã¿´ÎÐèÒªÕÒ²Ù×÷ÏµÍ³ÉêÇëËø
+JDKæ—©æœŸç‰ˆæœ¬ é‡é‡çº§ é”, æ¯æ¬¡éœ€è¦æ‰¾æ“ä½œç³»ç»Ÿç”³è¯·é”
 
-sync(Object) Object ²»ÄÜÓÃString,Integer,Long µÈ»ù´¡Êý¾ÝÀàÐÍ
-µÚÒ»¸öÏß³ÌµÚÒ»´Î·ÃÎÊµÄÊ±ºò, ÔÚObjectÍ·µÄMarkword ÉÏ¼ÇÂ¼Õâ¸öÏß³ÌID (³ÆÎª Æ«ÏòËø) 
-Èç¹ûÓÐ±ðµÄÏß³ÌÕùÓÃÕâ°ÑËø, ËøÉý¼¶Îª ×ÔÐýËø ,Ä¬ÈÏÊ®´Î (Ö´ÐÐÊ±¼ä¶Ì,Ïß³ÌÊýÁ¿ÉÙ,ÓÃ×ÔÐýËø)
-Ê®´ÎÖ®ºó,Éý¼¶ÎªÖØÁ¿¼¶Ëø
+sync(Object) Object ä¸èƒ½ç”¨String,Integer,Long ç­‰åŸºç¡€æ•°æ®ç±»åž‹
+ç¬¬ä¸€ä¸ªçº¿ç¨‹ç¬¬ä¸€æ¬¡è®¿é—®çš„æ—¶å€™, åœ¨Objectå¤´çš„Markword ä¸Šè®°å½•è¿™ä¸ªçº¿ç¨‹ID (ç§°ä¸º åå‘é”) 
+å¦‚æžœæœ‰åˆ«çš„çº¿ç¨‹äº‰ç”¨è¿™æŠŠé”, é”å‡çº§ä¸º è‡ªæ—‹é” ,é»˜è®¤åæ¬¡ (æ‰§è¡Œæ—¶é—´çŸ­,çº¿ç¨‹æ•°é‡å°‘,ç”¨è‡ªæ—‹é”)
+åæ¬¡ä¹‹åŽ,å‡çº§ä¸ºé‡é‡çº§é”
 
 
-ÓÅ»¯:
-1. Í¬²½´úÂë¿éÖÐµÄÓï¾äÔ½ÉÙÔ½ºÃ
-2. ÓÃ¶ÔÏóµ±ËøµÄÊ±ºò,ÓÃfinalÐÞÊÎ¶ÔÏó, ÒòÎª¶ÔÏó¿ÉÄÜ·¢Éú¸Ä±ä
+ä¼˜åŒ–:
+1. åŒæ­¥ä»£ç å—ä¸­çš„è¯­å¥è¶Šå°‘è¶Šå¥½
+2. ç”¨å¯¹è±¡å½“é”çš„æ—¶å€™,ç”¨finalä¿®é¥°å¯¹è±¡, å› ä¸ºå¯¹è±¡å¯èƒ½å‘ç”Ÿæ”¹å˜

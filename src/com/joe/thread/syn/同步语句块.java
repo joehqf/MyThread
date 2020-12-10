@@ -1,12 +1,12 @@
 package com.joe.thread.syn;
 
 /**
- * Í¬²½Óï¾ä¿é, Ëø×¡ĞèÒªÔöÉ¾¸ÄµÄ¶ÔÏó
+ * åŒæ­¥è¯­å¥å—, é”ä½éœ€è¦å¢åˆ æ”¹çš„å¯¹è±¡
  * 
  * @author hqf12
  *
  */
-public class Í¬²½Óï¾ä¿é implements Runnable {
+public class åŒæ­¥è¯­å¥å— implements Runnable {
 
 	Integer count = 10;
 
@@ -15,9 +15,9 @@ public class Í¬²½Óï¾ä¿é implements Runnable {
 
 		for (int i = 0; i < 10; i++) {
 			String name = Thread.currentThread().getName();
-			System.out.println(name + "  µ±Ç°Öµ:" + count);
+			System.out.println(name + "  å½“å‰å€¼:" + count);
 			synchronized (count) {
-				if ("¼õÏß³Ì".equals(name)) {
+				if ("å‡çº¿ç¨‹".equals(name)) {
 					count--;
 				} else {
 					count++;
@@ -28,10 +28,10 @@ public class Í¬²½Óï¾ä¿é implements Runnable {
 
 	public static void main(String[] args) {
 
-		Í¬²½·½·¨ target = new Í¬²½·½·¨();
+		åŒæ­¥æ–¹æ³• target = new åŒæ­¥æ–¹æ³•();
 
-		Thread t1 = new Thread(target, "¼õÏß³Ì");
-		Thread t2 = new Thread(target, "¼ÓÏß³Ì");
+		Thread t1 = new Thread(target, "å‡çº¿ç¨‹");
+		Thread t2 = new Thread(target, "åŠ çº¿ç¨‹");
 
 		t1.start();
 		t2.start();

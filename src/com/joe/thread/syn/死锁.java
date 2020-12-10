@@ -1,42 +1,42 @@
 package com.joe.thread.syn;
 
 /**
- * ËÀËøĞèÒªÂú×ãËÄ¸öÌõ¼ş
+ * æ­»é”éœ€è¦æ»¡è¶³å››ä¸ªæ¡ä»¶
  * 
  * @author hqf12
  *
  */
-public class ËÀËø {
+public class æ­»é” {
 
-	static String jz = "¾µ×Ó";
-	static String kh = "¿Úºì";
+	static String jz = "é•œå­";
+	static String kh = "å£çº¢";
 
 	public static void main(String[] args) {
 
 		new Thread(() -> {
 			synchronized (jz) {
-				System.out.println("»ñµÃ¾µ×ÓËø");
+				System.out.println("è·å¾—é•œå­é”");
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 				synchronized (kh) {
-					System.out.println("»ñµÃ¿ÚºìËø");
+					System.out.println("è·å¾—å£çº¢é”");
 				}
 			}
 		}).start();
 
 		new Thread(() -> {
 			synchronized (kh) {
-				System.out.println("»ñµÃ¿ÚºìËø");
+				System.out.println("è·å¾—å£çº¢é”");
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 				synchronized (jz) {
-					System.out.println("»ñµÃ¾µ×ÓËø");
+					System.out.println("è·å¾—é•œå­é”");
 				}
 			}
 		}).start();

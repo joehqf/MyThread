@@ -22,6 +22,10 @@ public class Client {
 		/*
 		 * 然后在这里就可以为所欲为了...
 		 */
+		a1.doSomething();
+		a2.doSomething();
+		b1.doSomething();
+		b2.doSomething();
 
 	}
 }

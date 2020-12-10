@@ -1,20 +1,20 @@
 package com.joe.thread.syn;
 
 /**
- * synchronizedĞŞÊÎ·½·¨,Ä¬ÈÏËø×¡this¶ÔÏó
+ * synchronizedä¿®é¥°æ–¹æ³•,é»˜è®¤é”ä½thiså¯¹è±¡
  * 
  * @author hqf12
  *
  */
-public class Í¬²½·½·¨ implements Runnable {
+public class åŒæ­¥æ–¹æ³• implements Runnable {
 	int count = 10;
 
 //	@Override
 //	synchronized public void run() {
 //		for (int i = 0; i < 10; i++) {
 //			String name = Thread.currentThread().getName();
-//			System.out.println(name + "  µ±Ç°Öµ:" + count);
-//			if ("¼õÏß³Ì".equals(name)) {
+//			System.out.println(name + "  å½“å‰å€¼:" + count);
+//			if ("å‡çº¿ç¨‹".equals(name)) {
 //				count--;
 //			} else {
 //				count++;
@@ -27,8 +27,8 @@ public class Í¬²½·½·¨ implements Runnable {
 		synchronized (this) {
 			for (int i = 0; i < 10; i++) {
 				String name = Thread.currentThread().getName();
-				System.out.println(name + "  µ±Ç°Öµ:" + count);
-				if ("¼õÏß³Ì".equals(name)) {
+				System.out.println(name + "  å½“å‰å€¼:" + count);
+				if ("å‡çº¿ç¨‹".equals(name)) {
 					count--;
 				} else {
 					count++;
@@ -41,13 +41,13 @@ public class Í¬²½·½·¨ implements Runnable {
 
 	public static void main(String[] args) {
 
-		Í¬²½·½·¨ target = new Í¬²½·½·¨();
+		åŒæ­¥æ–¹æ³• target = new åŒæ­¥æ–¹æ³•();
 
-		Thread t1 = new Thread(target, "¼õÏß³Ì");
-		Thread t2 = new Thread(target, "¼ÓÏß³Ì");
+		Thread t1 = new Thread(target, "å‡çº¿ç¨‹");
+		Thread t2 = new Thread(target, "åŠ çº¿ç¨‹");
 
-		Í¬²½·½·¨ target2 = new Í¬²½·½·¨();
-		Thread t3 = new Thread(target2, "¼ÓÏß³Ì");
+		åŒæ­¥æ–¹æ³• target2 = new åŒæ­¥æ–¹æ³•();
+		Thread t3 = new Thread(target2, "åŠ çº¿ç¨‹");
 
 		t1.start();
 		t2.start();

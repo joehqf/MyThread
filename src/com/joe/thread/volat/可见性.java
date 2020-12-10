@@ -1,15 +1,15 @@
 package com.joe.thread.volat;
 
 /**
- * volatile 1.±£Ö¤Ïß³Ì¿É¼ûĞÔ(Ô­Àí:MESI,»º´æÒ»ÖÂĞÔĞ­Òé) ,
- * 2.½ûÖ¹Ö¸ÁîÖØÅÅĞò(µ¥ÀıÄ£Ê½µÄË«ÖØ·Ç¿Õ¼ì²é,instanceĞèÒª¼Óvolatile)
+ * volatile 1.ä¿è¯çº¿ç¨‹å¯è§æ€§(åŸç†:MESI,ç¼“å­˜ä¸€è‡´æ€§åè®®) ,
+ * 2.ç¦æ­¢æŒ‡ä»¤é‡æ’åº(å•ä¾‹æ¨¡å¼çš„åŒé‡éç©ºæ£€æŸ¥,instanceéœ€è¦åŠ volatile)
  */
-public class ¿É¼ûĞÔ {
+public class å¯è§æ€§ {
 
 	volatile boolean flag = true;
 
 	private void m() {
-		System.out.println(Thread.currentThread().getName() + "¿ªÊ¼....");
+		System.out.println(Thread.currentThread().getName() + "å¼€å§‹....");
 		while (flag) {
 //			System.out.println("11");
 //			try {
@@ -18,12 +18,12 @@ public class ¿É¼ûĞÔ {
 //				e.printStackTrace();
 //			}
 		}
-		System.out.println(Thread.currentThread().getName() + "½áÊø....");
+		System.out.println(Thread.currentThread().getName() + "ç»“æŸ....");
 	}
 
 	public static void main(String[] args) {
-		¿É¼ûĞÔ c = new ¿É¼ûĞÔ();
-		new Thread(c::m, "Ïß³Ì1").start();
+		å¯è§æ€§ c = new å¯è§æ€§();
+		new Thread(c::m, "çº¿ç¨‹1").start();
 
 		try {
 			Thread.sleep(1000);

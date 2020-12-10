@@ -33,7 +33,7 @@ public class CountDownLatchTest {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("join ½áÊø");
+		System.out.println("join ç»“æŸ");
 	}
 
 	private static void usingCountDownLatch() {
@@ -59,6 +59,6 @@ public class CountDownLatchTest {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("latch ½áÊø");
+		System.out.println("latch ç»“æŸ");
 	}
 }

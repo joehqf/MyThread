@@ -3,7 +3,7 @@ package com.joe.thread.juc;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * CopyOnWriteArrayList 线程安全的List集合
+ * CopyOnWriteArrayList 绾跨▼瀹夊叏鐨凩ist闆嗗悎
  * 
  * @author hqf12
  *

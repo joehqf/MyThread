@@ -1,10 +1,10 @@
 package com.joe.thread.syn;
 
 /**
- * 异常会导致锁释放
+ * 寮傚父浼氬鑷撮攣閲婃斁
  * 
  */
-public class 异常情况 {
+public class 寮傚父鎯呭喌 {
 
 	static Integer count = 10;
 
@@ -25,8 +25,8 @@ public class 异常情况 {
 	}
 
 	public static void main(String[] args) {
-		异常情况 c = new 异常情况();
-		new Thread(c::m, "线程1").start();
-		new Thread(c::m, "线程2").start();
+		寮傚父鎯呭喌 c = new 寮傚父鎯呭喌();
+		new Thread(c::m, "绾跨▼1").start();
+		new Thread(c::m, "绾跨▼2").start();
 	}
 }

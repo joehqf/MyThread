@@ -4,20 +4,20 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * CyclicBarrier Õ¤À¸
+ * CyclicBarrier æ …æ 
  */
 public class CyclicBarrierTest {
 
 	public static void main(String[] args) {
 		CyclicBarrier cb = new CyclicBarrier(20, () -> {
-			System.out.println("Âú20¸öÏß³Ì,Ö´ĞĞ¸Ã·½·¨!");
+			System.out.println("æ»¡20ä¸ªçº¿ç¨‹,æ‰§è¡Œè¯¥æ–¹æ³•!");
 		});
 
 		for (int i = 0; i < 60; i++) {
 			new Thread(() -> {
 				try {
 					cb.await();
-					System.out.println(Thread.currentThread().getName());// Âú×ãÌõ¼ş²Å»áÖ´ĞĞ·½·¨
+					System.out.println(Thread.currentThread().getName());// æ»¡è¶³æ¡ä»¶æ‰ä¼šæ‰§è¡Œæ–¹æ³•
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} catch (BrokenBarrierException e) {

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * AtomicXXXÀà±¾ÉíÊÇÔ­×ÓĞÔµÄ,µ«²»ÄÜ±£Ö¤¶à¸ö·½·¨Á¬Ğøµ÷ÓÃÊÇÔ­×ÓĞÔµÄ
+ * AtomicXXXç±»æœ¬èº«æ˜¯åŸå­æ€§çš„,ä½†ä¸èƒ½ä¿è¯å¤šä¸ªæ–¹æ³•è¿ç»­è°ƒç”¨æ˜¯åŸå­æ€§çš„
  */
 public class TestAtomicInteger {
 
@@ -13,7 +13,7 @@ public class TestAtomicInteger {
 
 	private void m() {
 		for (int i = 0; i < 100; i++) {
-			count.incrementAndGet();// ÀÛ¼Ó²¢·µ»Ø
+			count.incrementAndGet();// ç´¯åŠ å¹¶è¿”å›
 		}
 	}
 

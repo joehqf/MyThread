@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * Ïß³Ì±äÁ¿²»¹²Ïí
+ * çº¿ç¨‹å˜é‡ä¸å…±äº«
  * 
  * @author hqf12
  *
@@ -23,20 +23,20 @@ public class Way3Callable implements Callable<Integer> {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		Way3Callable call = new Way3Callable();
-		// 1.´´½¨Ïß³Ì³Ø
+		// 1.åˆ›å»ºçº¿ç¨‹æ± 
 		ExecutorService es = Executors.newFixedThreadPool(2);
-		// 2.Ìá½»Ö´ĞĞ
+		// 2.æäº¤æ‰§è¡Œ
 		es.execute(() -> {
 			System.out.println(Thread.currentThread().getName());
 		});
 		Future<Integer> submit = es.submit(call);
 		Future<Integer> submit2 = es.submit(call);
-		// 3.»ñÈ¡½á¹û
+		// 3.è·å–ç»“æœ
 		Integer integer = submit.get();
 		Integer integer2 = submit2.get();
 		System.out.println(integer);
 		System.out.println(integer2);
-		// 4.¹Ø±Õ·şÎñ
+		// 4.å…³é—­æœåŠ¡
 		es.shutdown();
 	}
 

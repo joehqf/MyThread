@@ -28,8 +28,8 @@ public class ConditionTest<T> {
 
 			lists.add(t);
 			++count;
-			System.out.println("Éú²úÓÐ" + t);
-			consumer.signalAll();// Í¨ÖªÏû·ÑÕßÏû·Ñ
+			System.out.println("ç”Ÿäº§æœ‰" + t);
+			consumer.signalAll();// é€šçŸ¥æ¶ˆè´¹è€…æ¶ˆè´¹
 		} finally {
 			lock.unlock();
 		}
@@ -48,8 +48,8 @@ public class ConditionTest<T> {
 			}
 			remove = lists.removeFirst();
 			count--;
-//			System.out.println("Ïû·Ñ" + remove);
-			producer.signalAll();// Í¨ÖªÉú²úÕßÉú²ú
+//			System.out.println("æ¶ˆè´¹" + remove);
+			producer.signalAll();// é€šçŸ¥ç”Ÿäº§è€…ç”Ÿäº§
 		} finally {
 			lock.unlock();
 		}
@@ -61,7 +61,7 @@ public class ConditionTest<T> {
 		for (int i = 0; i < 10; i++) {
 			new Thread(() -> {
 				for (int j = 0; j < 5; j++) {
-					System.out.println("Ïû·Ñ" + c.sub());
+					System.out.println("æ¶ˆè´¹" + c.sub());
 				}
 			}, "s" + i).start();
 		}

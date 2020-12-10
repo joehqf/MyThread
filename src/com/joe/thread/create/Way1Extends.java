@@ -1,7 +1,7 @@
 package com.joe.thread.create;
 
 /**
- * Ïß³Ì±äÁ¿²»¹²Ïí
+ * çº¿ç¨‹å˜é‡ä¸å…±äº«
  * 
  * @author hqf12
  *
@@ -20,15 +20,15 @@ public class Way1Extends extends Thread {
 			if (i < 1) {
 				break;
 			}
-			System.out.println(Thread.currentThread().getName() + "~" + i + "Æ±");
+			System.out.println(Thread.currentThread().getName() + "~" + i + "ç¥¨");
 			i--;
 		}
 	}
 
 	public static void main(String[] args) {
-		Way1Extends way = new Way1Extends("´°¿Ú1");
-		Way1Extends way2 = new Way1Extends("´°¿Ú2");
-		Way1Extends way3 = new Way1Extends("´°¿Ú3");
+		Way1Extends way = new Way1Extends("çª—å£1");
+		Way1Extends way2 = new Way1Extends("çª—å£2");
+		Way1Extends way3 = new Way1Extends("çª—å£3");
 		way.start();
 		way2.start();
 		way3.start();

@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * tryLock½øĞĞ³¢ÊÔËø¶¨,²»¹ÜËø¶¨Óë·ñ,·½·¨¶¼½«¼ÌĞøÖ´ĞĞ
+ * tryLockè¿›è¡Œå°è¯•é”å®š,ä¸ç®¡é”å®šä¸å¦,æ–¹æ³•éƒ½å°†ç»§ç»­æ‰§è¡Œ
  */
 public class TryLockTest {
 	final ReentrantLock lock = new ReentrantLock();
@@ -29,11 +29,11 @@ public class TryLockTest {
 		boolean flag = false;
 		try {
 			try {
-				flag = lock.tryLock(5, TimeUnit.SECONDS);// seconds-Ãë
+				flag = lock.tryLock(5, TimeUnit.SECONDS);// seconds-ç§’
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println("Ö´ĞĞm2 " + flag);
+			System.out.println("æ‰§è¡Œm2 " + flag);
 		} finally {
 			if (flag)
 				lock.unlock();

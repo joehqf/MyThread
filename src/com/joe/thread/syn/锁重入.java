@@ -1,14 +1,14 @@
 package com.joe.thread.syn;
 
 /**
- * ¹Ø¼ü×ÖsynchronizedÓµÓĞËøÖØÈëµÄ¹¦ÄÜ£¬
- * Ò²¾ÍÊÇÔÚÊ¹ÓÃsynchronizedÊ±£¬µ±Ò»¸öÏß³ÌµÃµ½Ò»¸ö¶ÔÏóËøºó£¬ÔÙ´ÎÇëÇó´Ë¶ÔÏóËøÊ±ÊÇ¿ÉÒÔÔÙ´ÎµÃµ½¸Ã¶ÔÏóµÄËøµÄ¡£
- * ÕâÒ²Ö¤Ã÷ÔÚÒ»¸ösynchronized·½·¨/¿éµÄÄÚ²¿µ÷ÓÃ±¾ÀàµÄÆäËûsynchronized·½·¨/¿éÊ±£¬ÊÇÓÀÔ¶¿ÉÒÔµÃµ½ËøµÄ¡£
- * µ±´æÔÚ¸¸×ÓÀà¼Ì³Ğ¹ØÏµÊ±£¬×ÓÀàÊÇÍêÈ«¿ÉÒÔÍ¨¹ı¡°¿ÉÖØÈëËø¡±µ÷ÓÃ¸¸ÀàµÄÍ¬²½·½·¨µÄ¡£
+ * å…³é”®å­—synchronizedæ‹¥æœ‰é”é‡å…¥çš„åŠŸèƒ½ï¼Œ
+ * ä¹Ÿå°±æ˜¯åœ¨ä½¿ç”¨synchronizedæ—¶ï¼Œå½“ä¸€ä¸ªçº¿ç¨‹å¾—åˆ°ä¸€ä¸ªå¯¹è±¡é”åï¼Œå†æ¬¡è¯·æ±‚æ­¤å¯¹è±¡é”æ—¶æ˜¯å¯ä»¥å†æ¬¡å¾—åˆ°è¯¥å¯¹è±¡çš„é”çš„ã€‚
+ * è¿™ä¹Ÿè¯æ˜åœ¨ä¸€ä¸ªsynchronizedæ–¹æ³•/å—çš„å†…éƒ¨è°ƒç”¨æœ¬ç±»çš„å…¶ä»–synchronizedæ–¹æ³•/å—æ—¶ï¼Œæ˜¯æ°¸è¿œå¯ä»¥å¾—åˆ°é”çš„ã€‚
+ * å½“å­˜åœ¨çˆ¶å­ç±»ç»§æ‰¿å…³ç³»æ—¶ï¼Œå­ç±»æ˜¯å®Œå…¨å¯ä»¥é€šè¿‡â€œå¯é‡å…¥é”â€è°ƒç”¨çˆ¶ç±»çš„åŒæ­¥æ–¹æ³•çš„ã€‚
  * 
- * ³öÏÖÒì³£,Ëø×Ô¶¯ÊÍ·Å
+ * å‡ºç°å¼‚å¸¸,é”è‡ªåŠ¨é‡Šæ”¾
  */
-public class ËøÖØÈë implements Runnable {
+public class é”é‡å…¥ implements Runnable {
 
 	synchronized public void sayA() {
 		System.out.println("A");
@@ -25,9 +25,9 @@ public class ËøÖØÈë implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		ËøÖØÈë runa = new ËøÖØÈë();
-		Thread t1 = new Thread(runa, "ÖØÈëËø");
-		Thread t2 = new Thread(runa, "ÖØÈëËø2");
+		é”é‡å…¥ runa = new é”é‡å…¥();
+		Thread t1 = new Thread(runa, "é‡å…¥é”");
+		Thread t2 = new Thread(runa, "é‡å…¥é”2");
 		t1.start();
 		t2.start();
 	}

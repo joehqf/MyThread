@@ -2,9 +2,9 @@ package com.joe.thread.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ¹«Æ½Ëø {
+public class å…¬å¹³é” {
 
-	final ReentrantLock lock = new ReentrantLock(true);// ÉèÎª¹«Æ½Ëø
+	final ReentrantLock lock = new ReentrantLock(true);// è®¾ä¸ºå…¬å¹³é”
 
 	private void m() {
 		for (int i = 0; i < 100; i++) {
@@ -18,8 +18,8 @@ public class ¹«Æ½Ëø {
 	}
 
 	public static void main(String[] args) {
-		¹«Æ½Ëø c = new ¹«Æ½Ëø();
-		new Thread(c::m, "Ïß³Ì1").start();
-		new Thread(c::m, "Ïß³Ì2").start();
+		å…¬å¹³é” c = new å…¬å¹³é”();
+		new Thread(c::m, "çº¿ç¨‹1").start();
+		new Thread(c::m, "çº¿ç¨‹2").start();
 	}
 }

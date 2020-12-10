@@ -3,7 +3,7 @@ package com.joe.thread.juc;
 import java.util.concurrent.Exchanger;
 
 /**
- * 线程交换数据
+ * 绾跨▼浜ゆ崲鏁版嵁
  */
 public class ExchangerTest {
 
@@ -12,7 +12,7 @@ public class ExchangerTest {
 	public static void main(String[] args) {
 
 		new Thread(() -> {
-			String val = "线程1";
+			String val = "绾跨▼1";
 			try {
 				val = changer.exchange(val);
 			} catch (InterruptedException e) {
@@ -22,7 +22,7 @@ public class ExchangerTest {
 		}, "T1").start();
 
 		new Thread(() -> {
-			String val = "线程2";
+			String val = "绾跨▼2";
 			try {
 				val = changer.exchange(val);
 			} catch (InterruptedException e) {

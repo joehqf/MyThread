@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * volatile²»ÄÜÌæ´úsync
+ * volatileä¸èƒ½æ›¿ä»£sync
  *
  */
-public class ²»ÄÜ±£Ö¤Ô­×ÓĞÔ {
+public class ä¸èƒ½ä¿è¯åŸå­æ€§ {
 
 	volatile int count = 0;
 
@@ -19,17 +19,17 @@ public class ²»ÄÜ±£Ö¤Ô­×ÓĞÔ {
 
 	public static void main(String[] args) {
 
-		²»ÄÜ±£Ö¤Ô­×ÓĞÔ c = new ²»ÄÜ±£Ö¤Ô­×ÓĞÔ();
+		ä¸èƒ½ä¿è¯åŸå­æ€§ c = new ä¸èƒ½ä¿è¯åŸå­æ€§();
 		List<Thread> ts = new ArrayList<>();
 
 		for (int i = 0; i < 10; i++) {
-			ts.add(new Thread(c::m, "Ïß³Ì" + i));
+			ts.add(new Thread(c::m, "çº¿ç¨‹" + i));
 		}
 
 		ts.forEach((item) -> item.start());
 		ts.forEach((item) -> {
 			try {
-				item.join();// ±£Ö¤Ö´ĞĞËùÓĞ×ÓÏß³Ì
+				item.join();// ä¿è¯æ‰§è¡Œæ‰€æœ‰å­çº¿ç¨‹
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

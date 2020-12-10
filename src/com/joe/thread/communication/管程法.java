@@ -1,23 +1,23 @@
 package com.joe.thread.communication;
 
 /**
- * Ïû·ÑÕß/Éú²úÕß,ÀûÓÃ»º³åÇø½â¾ö:¹Ü³Ì·¨
+ * æ¶ˆè´¹è€…/ç”Ÿäº§è€…,åˆ©ç”¨ç¼“å†²åŒºè§£å†³:ç®¡ç¨‹æ³•
  *
  */
-public class ¹Ü³Ì·¨ {
+public class ç®¡ç¨‹æ³• {
 
 	public static void main(String[] args) {
-		»º³åÇø hcq = new »º³åÇø();
-		new Éú²úÕß(hcq).start();
-		new Ïû·ÑÕß(hcq).start();
+		ç¼“å†²åŒº hcq = new ç¼“å†²åŒº();
+		new ç”Ÿäº§è€…(hcq).start();
+		new æ¶ˆè´¹è€…(hcq).start();
 
 	}
 }
 
-class Ïû·ÑÕß extends Thread {
-	»º³åÇø hcq;
+class æ¶ˆè´¹è€… extends Thread {
+	ç¼“å†²åŒº hcq;
 
-	public Ïû·ÑÕß(»º³åÇø hcq) {
+	public æ¶ˆè´¹è€…(ç¼“å†²åŒº hcq) {
 		this.hcq = hcq;
 	}
 
@@ -25,34 +25,34 @@ class Ïû·ÑÕß extends Thread {
 	public void run() {
 		for (int i = 0; i < 15; i++) {
 			int pop = hcq.pop();
-			System.out.println("Ïû·ÑÖµ:" + pop);
+			System.out.println("æ¶ˆè´¹å€¼:" + pop);
 		}
 	}
 }
 
-class Éú²úÕß extends Thread {
-	»º³åÇø hcq;
+class ç”Ÿäº§è€… extends Thread {
+	ç¼“å†²åŒº hcq;
 
-	public Éú²úÕß(»º³åÇø hcq) {
+	public ç”Ÿäº§è€…(ç¼“å†²åŒº hcq) {
 		this.hcq = hcq;
 	}
 
 	@Override
 	public void run() {
 		for (int i = 0; i < 20; i++) {
-			System.out.println("Éú²ú");
+			System.out.println("ç”Ÿäº§");
 			hcq.push();
 		}
 	}
 }
 
-class »º³åÇø {
-	int count = 0;// ÈİÆ÷¼ÆÊıÆ÷
+class ç¼“å†²åŒº {
+	int count = 0;// å®¹å™¨è®¡æ•°å™¨
 
-	// Éú²úÕß Ìí¼Ó²úÆ·
+	// ç”Ÿäº§è€… æ·»åŠ äº§å“
 	synchronized public void push() {
 		if (count == 10) {
-			// Èç¹ûÈİÆ÷ÂúÁË,ÔòÍ¨ÖªÏû·ÑÕßÏû·Ñ, Éú²úµÈ´ı
+			// å¦‚æœå®¹å™¨æ»¡äº†,åˆ™é€šçŸ¥æ¶ˆè´¹è€…æ¶ˆè´¹, ç”Ÿäº§ç­‰å¾…
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
@@ -69,10 +69,10 @@ class »º³åÇø {
 		this.notify();
 	}
 
-//	Ïû·ÑÕßÏû·Ñ²úÆ·
+//	æ¶ˆè´¹è€…æ¶ˆè´¹äº§å“
 	synchronized public int pop() {
 		if (count == 0) {
-			// Í¨ÖªÉú²ú,Ïû·ÑÕßµÈ´ı,
+			// é€šçŸ¥ç”Ÿäº§,æ¶ˆè´¹è€…ç­‰å¾…,
 			try {
 				this.wait();
 			} catch (InterruptedException e) {
